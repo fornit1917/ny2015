@@ -1,0 +1,54 @@
+body {
+    background: url(../img/back.jpg) repeat;
+    overflow-x: hidden;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrap {
+    text-align: center;
+}
+
+.content {
+    width: 708px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cover {
+    z-index: 30;
+}
+
+.snow {
+    z-index: 25;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cat {
+    z-index: 1;
+}
+
+.title {
+    color: #151658;
+}

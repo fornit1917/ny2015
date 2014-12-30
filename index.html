@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="js/cat.js"></script>
+
+    <title>Happy new year!</title>
+
+    <script>
+        $(document).ready(function(){
+
+            document.getElementById('audioBack').volume = 0.2;
+
+            $('#cover').on('click', function(){
+                $(this).animate({
+                    left: '-=9000'
+                }, 3000)
+                $('#title').html('Гладь котика :)');
+            });
+
+            Snow.init(15, document.getElementById('snow'));
+            Cat.init(document.getElementById('snow'), [
+                    document.getElementById('audioMur'),
+                    document.getElementById('audioMau')
+            ]);
+        });
+
+
+
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <h4 id="title" class="title">Открывай открытку!)</h4>
+        <div class="content">
+            <img id="cover"   class="cover pointer" src="img/cover.jpg"/>
+            <canvas width="708" height="500" class="snow" id="snow"></canvas>
+            <img id="catImg" class="cat" src="img/cat.jpg"/>
+        </div>
+    </div>
+
+    <audio autoplay loop id="audioBack">
+        <source src="audio/music.mp3"  type="audio/mp3" >
+        <source src="audio/music.ogg"  type="audio/ogg" >
+    </audio>
+
+    <audio id="audioMur">
+        <source src="audio/mur.mp3"  type="audio/mp3" >
+        <source src="audio/mur.ogg"  type="audio/ogg" >
+    </audio>
+
+    <audio id="audioMau">
+        <source src="audio/mau.mp3"  type="audio/mp3" >
+        <source src="audio/mau.ogg"  type="audio/ogg" >
+    </audio>
+</body>
+</html>
