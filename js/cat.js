@@ -40,7 +40,7 @@ Cat.playSound = function() {
     Cat.play = true;
     $('#title').html('Мррррррр :)')
     Cat.audios[Cat.current].load();
-    Cat.audios[Cat.current].currentTime = 0;
+    //Cat.audios[Cat.current].currentTime = 0;
     Cat.audios[Cat.current].play();
 
     Cat.current++;
